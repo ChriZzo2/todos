@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.todo-list {
+  @apply max-w-4xl mx-auto p-6;
+
+  &__item {
+    @apply flex items-center justify-between p-4 mb-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  &__title {
+    @apply flex-1 ml-4 text-gray-700;
+    
+    &--completed {
+      @apply line-through text-gray-400;
+    }
+  }
+
+  &__actions {
+    @apply flex gap-2;
+  }
+}
+
+.todo-form {
+  @apply max-w-2xl mx-auto p-6;
+
+  &__input {
+    @apply w-full p-3 mb-4 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none;
+  }
+
+  &__button {
+    @apply w-full;
+  }
+}
+
+.todo-details {
+  @apply max-w-2xl mx-auto p-6;
+
+  &__card {
+    @apply bg-white p-6 rounded-lg shadow-lg;
+  }
+
+  &__title {
+    @apply text-2xl font-bold mb-4;
+  }
+
+  &__info {
+    @apply mb-6;
+  }
+
+  &__actions {
+    @apply flex gap-4;
+  }
+}
