@@ -32,7 +32,7 @@ export function TodoItem({ todo }: TodoItemProps) {
               todo.completed ? 'todo-list__title--completed' : ''
             }`}
           >
-            {todo.title}
+            {`${todo.title}${' '}(${todo.id})`}
           </span>
         </Link>
       </button>
