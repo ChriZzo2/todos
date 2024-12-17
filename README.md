@@ -1,47 +1,57 @@
 # Todo List Application
 
-A modern Todo List application built with Next.js, TypeScript, and Redux. This application allows users to manage their tasks with features like adding, completing, and deleting todos.
+Современное приложение для управления задачами, построенное с использованием Next.js 14, TypeScript и Redux Toolkit.
 
-## Features
+## Основные возможности
 
-- View list of todos
-- Add new todos
-- Mark todos as complete/incomplete
-- Delete todos
-- View detailed information about each todo
-- Responsive design
-- State management with Redux
-- Type safety with TypeScript
+- 📝 Создание и управление задачами
+- 👥 Фильтрация задач по пользователям
+- ✅ Отметка задач как выполненных/невыполненных
+- 🗑️ Удаление задач
+- 📱 Адаптивный дизайн
+- 🌐 Интеграция с внешним API
+- 🔄 Управление состоянием через Redux
+- 🎨 Стилизация с помощью Tailwind CSS и SCSS
+- 🎯 Типизация с TypeScript
 
-## Getting Started
+## Технологический стек
 
-1. Clone the repository
-2. Install dependencies:
+- Next.js 14
+- TypeScript
+- Redux Toolkit
+- SCSS/Tailwind CSS
+- shadcn/ui компоненты
+- Lucide React иконки
+
+## Начало работы
+
+1. Клонируйте репозиторий:
+   ```bash
+   git clone [url-репозитория]
+   ```
+
+2. Установите зависимости:
    ```bash
    npm install
    ```
-3. Run the development server:
+
+3. Создайте файл .env:
+   ```plaintext
+   NEXT_PUBLIC_API_URL=https://jsonplaceholder.typicode.com
+   ```
+
+4. Запустите проект:
    ```bash
    npm run dev
    ```
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Tech Stack
+5. Откройте [http://localhost:3000](http://localhost:3000)
 
-- Next.js 13
-- TypeScript
-- Redux Toolkit
-- SCSS
-- Tailwind CSS
-- shadcn/ui
-- Lucide React Icons
-
-## Project Structure
+## Структура проекта
 
 - `/app` - Next.js app directory containing pages and layouts
 - `/lib` - Utility functions, types, and Redux store
 - `/components` - Reusable UI components
-- `/styles` - Global styles and SCSS modules
 
 ## API
 

@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
-import { fetchTodos, setSelectedUserId } from '@/lib/store/todosSlice';
+import { fetchTodos, setSelectedUserId } from '@/lib/store/features/todoSlice';
 import { TodoItem } from './TodoItem';
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 import { ErrorMessage } from '@/components/ui/ErrorMessage';

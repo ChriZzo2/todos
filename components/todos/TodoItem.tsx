@@ -17,14 +17,15 @@ export function TodoItem({ todo }: TodoItemProps) {
   return (
     <div className="todo-list__item">
       <button
-        onClick={() => dispatch(toggleTodo(todo.id))}
         className="flex items-center"
       >
+          <div onClick={() => dispatch(toggleTodo(todo.id))}>
         {todo.completed ? (
           <CheckCircle className="h-5 w-5 text-green-500" />
         ) : (
           <Circle className="h-5 w-5 text-gray-400" />
         )}
+          </div>
         <Link href={`/tasks/${todo.id}`}>
           <span
             className={`todo-list__title ${

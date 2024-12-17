@@ -1,4 +1,4 @@
-import './styles/globals.scss';
+import './globals.scss';
 import { Providers } from './providers';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -6,8 +6,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Todo App',
-  description: 'A simple todo application built with Next.js',
+  title: 'Todo List',
+  description: 'Test project',
 };
 
 export default function RootLayout({

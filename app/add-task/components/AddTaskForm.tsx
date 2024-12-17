@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { addTodo } from '@/lib/store/features/todoSlice';
-import { fetchTodos } from '@/lib/store/todosSlice';
+import { fetchTodos } from '@/lib/store/features/todoSlice';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select } from '@/components/ui/select';

@@ -30,6 +30,9 @@ const todoSlice = createSlice({
       const newId = Math.max(...state.todos.map((todo) => todo.id), 0) + 1;
       state.todos.push({ ...action.payload, id: newId });
     },
+    setSelectedUserId: (state, action: PayloadAction<number | null>) => {
+      state.selectedUserId = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -47,5 +50,5 @@ const todoSlice = createSlice({
   },
 });
 
-export const { toggleTodo, deleteTodo, addTodo } = todoSlice.actions;
+export const { toggleTodo, deleteTodo, addTodo, setSelectedUserId } = todoSlice.actions;
 export default todoSlice.reducer;
