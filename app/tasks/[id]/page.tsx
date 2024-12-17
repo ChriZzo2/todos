@@ -2,9 +2,10 @@
 
 import { useRouter } from 'next/navigation';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
-import { toggleTodo } from '@/lib/store/features/todoSlice';
+import {fetchTodos, toggleTodo} from '@/lib/store/features/todoSlice';
 import { TaskDetails } from './components/TaskDetails';
 import { TaskActions } from './components/TaskActions';
+import {useEffect} from "react";
 
 export default function TaskPage({ params }: { params: { id: string } }) {
   const router = useRouter();
@@ -12,9 +13,16 @@ export default function TaskPage({ params }: { params: { id: string } }) {
   const todo = useAppSelector((state) =>
     state.todos.todos.find((t) => t.id === parseInt(params.id))
   );
+  const {  status } = useAppSelector((state) => state.todos);
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchTodos());
+    }
+  }, [status, dispatch]);
 
   if (!todo) {
-    return <div>Task not found</div>;
+    return;
   }
 
   return (
