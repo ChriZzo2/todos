@@ -13,7 +13,7 @@ export default function Home() {
         <Link href="/add-task">
           <Button>
             <Plus className="mr-2 h-4 w-4" />
-            Add Task
+            Add Task1
           </Button>
         </Link>
       </div>
